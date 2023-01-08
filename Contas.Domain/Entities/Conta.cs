@@ -55,7 +55,7 @@ public class Conta
         var baseCalculoJuros = Math.Pow(1 + (double)porcentagemDeJuros, DiasEmAtraso) - 1;
         var juros = ValorOriginal * (decimal)baseCalculoJuros;
 
-        ValorCorrigido = ValorOriginal + multa + juros;
+        ValorCorrigido = Math.Round(ValorOriginal + multa + juros, 2);
     }
 
     private void CalculaDiasEmAtraso()
